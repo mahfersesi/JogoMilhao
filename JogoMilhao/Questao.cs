@@ -1,6 +1,6 @@
 namespace JogoMilhao
 {
-    public class Questão
+    public class Questao
     {
         public string Pergunta;
         public string Resposta1;
@@ -18,7 +18,7 @@ namespace JogoMilhao
         private Button Button5;
 
 
-        public void ConfiguraEstruturaDesenho()
+        public void ConfiguraEstruturaDesenho(Label labelpergunta, Button buttonresposta1, Button buttonresposta2, Button buttonresposta3, Button buttonresposta4, Button buttonresposta5)
         {
             Labelpergunta = labelpergunta;
             Button1 = buttonresposta1;
@@ -27,7 +27,7 @@ namespace JogoMilhao
             Button4 = buttonresposta4;
             Button5 = buttonresposta5;
         }
-        public void Desenhar()
+        public void Desenhar(Label labelpergunta, Button buttonresposta1, Button buttonresposta2, Button buttonresposta3, Button buttonresposta4, Button buttonresposta5)
         {
             Labelpergunta = labelpergunta;
             Button1 = buttonresposta1;
@@ -39,15 +39,15 @@ namespace JogoMilhao
         private Button QualBTN(int RR)
         {
             if (RR==1)
-            return botaoResposta01;
+            return Button1;
             else if (RR==2)
-            return botaoResposta02;
+            return Button2;
             else if (RR==3)
-            return botaoResposta03;
+            return Button3;
             else if (RR==4)
-            return botaoResposta04;
+            return Button4;
             else if (RR==5)
-            return botaoResposta05;
+            return Button5;
             else 
             return null;
         }

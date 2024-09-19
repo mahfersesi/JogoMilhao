@@ -5,7 +5,7 @@
 
     <Grid>
     <Grid.RowDefinitions>
-        <RowDefinition Height="150"/>
+        <RowDefinition Height="250"/>
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
@@ -17,7 +17,8 @@
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-    <Image Source="jogodomihao"/>
+    <Image Source="jogodomihao"
+            Grid.Row="1"/>
     
     </Grid>
 
