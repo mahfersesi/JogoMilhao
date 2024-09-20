@@ -27,14 +27,14 @@ namespace JogoMilhao
             Button4 = buttonresposta4;
             Button5 = buttonresposta5;
         }
-        public void Desenhar(Label labelpergunta, Button buttonresposta1, Button buttonresposta2, Button buttonresposta3, Button buttonresposta4, Button buttonresposta5)
+        public void Desenhar()
         {
-            Labelpergunta = labelpergunta;
-            Button1 = buttonresposta1;
-            Button2 = buttonresposta2;
-            Button3 = buttonresposta3;
-            Button4 = buttonresposta4;
-            Button5 = buttonresposta5;
+            Labelpergunta.Text = Pergunta;
+            Button1.Text = Resposta1;
+            Button2.Text = Resposta2;
+            Button3.Text = Resposta3;
+            Button4.Text = Resposta4;
+            Button5.Text = Resposta5;
         }
         private Button QualBTN(int RR)
         {
@@ -53,19 +53,19 @@ namespace JogoMilhao
         }
         public bool VerificaResposta(int RR)
         {
-            if (RespostaCerta==RR)
+            if (Respostacorreta==RR)
             {
                 var BTN= QualBTN(RR);
-                BTN BackgrounColor=Colors.Green;
+                BTN.BackgroundColor=Colors.Green;
                 return true;
 
             }
             else
             {
-                var BTNCorreto=QualBTN(RespostaCerta);
+                var BTNCorreto = QualBTN(Respostacorreta);
                 var BTNIncorreto=QualBTN(RR);
-                BTNCorreto.BackgrounColor=Colors.Yellow;
-                BTNIncorreto.BackgrounColor=Colors.Red;
+                BTNCorreto.BackgroundColor=Colors.Blue;
+                BTNIncorreto.BackgroundColor=Colors.Red;
                 return false;
             }
         }

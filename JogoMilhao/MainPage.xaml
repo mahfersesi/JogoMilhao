@@ -1,24 +1,82 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="JogoMilhao.MainPage">
+             x:Class="JogoMilhao.MainPage"
+              Shell.NavBarIsVisible="False"
+             BackgroundColor="Black">
 
     <Grid>
     <Grid.RowDefinitions>
         <RowDefinition Height="250"/>
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
+        <RowDefinition Height="10"/>
         <RowDefinition Height="*"/>
+        <RowDefinition Height="10"/>
         <RowDefinition Height="*"/>
+        <RowDefinition Height="10"/>
         <RowDefinition Height="*"/>
+        <RowDefinition Height="10"/>
         <RowDefinition Height="*"/>
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="*"/>
+        <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
-    <Image Source="jogodomihao"
-            Grid.Row="1"/>
+
+
+    <Image Source="jogodomilhao.png"
+             Aspect="AspectFill"
+            Grid.Row="0"/>
+
+    <Label x:Name="labelpergunta"
+             TextColor="White"
+             FontSize="18"
+             FontFamily="OpenSansSemibold"
+             Grid.Row="1"
+             Grid.RowSpan="2"/>
+
+     <Button x:Name="btnResposta01"
+            FontAttributes="Bold"
+              FontSize="16"
+              TextColor="Black"
+              BackgroundColor="Yellow"
+              FontFamily="OpenSansSemibold"
+              Grid.Row="2"
+              Clicked="OnBtnResposta01Clicked"/>
+        
+    <Button x:Name="btnResposta02"
+            FontAttributes="Bold"
+              FontSize="16"
+              TextColor="Black"
+              BackgroundColor="Yellow"
+              FontFamily="OpenSansSemibold"
+              Grid.Row="4"
+              Clicked="OnBtnResposta02Clicked"/>
+
+    <Button x:Name="btnResposta03"
+            FontAttributes="Bold"
+              FontSize="16"
+              TextColor="Black"
+              BackgroundColor="Yellow"
+              FontFamily="OpenSansSemibold"
+              Grid.Row="6"
+              Clicked="OnBtnResposta03Clicked"/>
+
+    <Button x:Name="btnResposta04"
+            FontAttributes="Bold"
+              FontSize="16"
+              TextColor="Black"
+              BackgroundColor="Yellow"
+              FontFamily="OpenSansSemibold"
+              Grid.Row="8"
+              Clicked="OnBtnResposta04Clicked"/>
+
+    <Button x:Name="btnResposta05"
+            FontAttributes="Bold"
+              FontSize="16"
+              TextColor="Black"
+              BackgroundColor="Yellow"
+              FontFamily="OpenSansSemibold"
+              Grid.Row="10"
+              Clicked="OnBtnResposta05Clicked"/>
     
     </Grid>
 
