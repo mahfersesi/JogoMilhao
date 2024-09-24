@@ -1218,7 +1218,7 @@ public class Gerenciador
    
 }
 
-}
+
 
 
       public void ProximaQuestao()
@@ -1238,3 +1238,4 @@ public class Gerenciador
          ProximaQuestao();
         }
       }
+}
