@@ -11,6 +11,7 @@
         
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
         <RowDefinition Height="10"/>
         <RowDefinition Height="*"/>
         <RowDefinition Height="10"/>
@@ -22,10 +23,38 @@
         <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
 
+        <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+   
+    </Grid.ColumnDefinitions>
+
+
 
     <Image Source="jogodomilhao.png"
              Aspect="AspectFill"
-            Grid.Row="0"/>
+            Grid.Row="0"
+            Grid.ColumnSpan="3"/>
+
+         <Label Text="Pontuação:"
+                               TextColor="White" 
+                               FontSize="16"
+                               FontFamily="StalystaPersonal"
+                               Margin="10, 2, 10, 15"
+                               x:Name="labelPontuacao"
+                               Grid.Row="1"
+                               Grid.Column="0"
+                               Grid.ColumnSpan="2"/>
+
+        <Label Text="Nível:"
+                               TextColor="White" 
+                               FontSize="16"
+                               FontFamily="StalystaPersonal"
+                               Margin="10,2, 10, 15"
+                               x:Name="labelNivel" 
+                               Grid.Row="1"
+                               Grid.Column="2"/>
 
         
 
@@ -33,8 +62,9 @@
              TextColor="White"
              FontSize="18"
              FontFamily="OpenSansSemibold"
-             Grid.Row="1"
-             Grid.RowSpan="2"/>
+             Grid.Row="2"
+             Grid.RowSpan="2"
+             Grid.ColumnSpan="3"/>
 
      <Button x:Name="btnResposta01"
             FontAttributes="Bold"
@@ -42,7 +72,8 @@
               TextColor="Black"
               BackgroundColor="Yellow"
               FontFamily="OpenSansSemibold"
-              Grid.Row="2"
+              Grid.Row="3"
+              Grid.ColumnSpan="3"
               Clicked="OnBtnResposta01Clicked"/>
         
     <Button x:Name="btnResposta02"
@@ -51,7 +82,8 @@
               TextColor="Black"
               BackgroundColor="Yellow"
               FontFamily="OpenSansSemibold"
-              Grid.Row="4"
+              Grid.Row="5"
+              Grid.ColumnSpan="3"
               Clicked="OnBtnResposta02Clicked"/>
 
     <Button x:Name="btnResposta03"
@@ -60,7 +92,8 @@
               TextColor="Black"
               BackgroundColor="Yellow"
               FontFamily="OpenSansSemibold"
-              Grid.Row="6"
+              Grid.Row="7"
+              Grid.ColumnSpan="3"
               Clicked="OnBtnResposta03Clicked"/>
 
     <Button x:Name="btnResposta04"
@@ -69,7 +102,8 @@
               TextColor="Black"
               BackgroundColor="Yellow"
               FontFamily="OpenSansSemibold"
-              Grid.Row="8"
+              Grid.Row="9"
+              Grid.ColumnSpan="3"
               Clicked="OnBtnResposta04Clicked"/>
 
     <Button x:Name="btnResposta05"
@@ -78,7 +112,8 @@
               TextColor="Black"
               BackgroundColor="Yellow"
               FontFamily="OpenSansSemibold"
-              Grid.Row="10"
+              Grid.Row="11"
+              Grid.ColumnSpan="3"
               Clicked="OnBtnResposta05Clicked"/>
     
     </Grid>

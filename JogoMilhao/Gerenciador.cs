@@ -2,12 +2,15 @@ namespace JogoMilhao;
 
 public class Gerenciador
 {
+    
     List<Questao> ListaQuestoes = new List<Questao>();
     List<int> ListaQuestoesRespondidas = new List<int>();
     Questao QuestaoCorrente;
     public Gerenciador(Label labelPergunta,Button BTNResposta01,Button BTNResposta02,Button BTNResposta03,Button BTNResposta04, Button BTNResposta05)
     {
         CriarQuestoes(labelPergunta, BTNResposta01, BTNResposta02, BTNResposta03, BTNResposta04, BTNResposta05);
+        this.labelNivel = labelNivel;
+        this.labelPontuacao = labelPontuacao;
     }
     void CriarQuestoes(Label labelPergunta, Button BTNResposta01, Button BTNResposta02, Button BTNResposta03, Button BTNResposta04, Button BTNResposta05)
 {

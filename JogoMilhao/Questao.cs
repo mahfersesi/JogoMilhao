@@ -9,6 +9,8 @@ namespace JogoMilhao
         public string Resposta4;
         public string Resposta5;
         public int Respostacorreta;
+        public int labelNivel;
+        public int labelPontuacao ;
         public int Nivelresposta;
         private Label Labelpergunta;
         private Button Button1;
@@ -58,6 +60,7 @@ namespace JogoMilhao
                 var BTN= QualBTN(RR);
                 BTN.BackgroundColor=Colors.Green;
                 return true;
+                
 
             }
             else
@@ -67,6 +70,8 @@ namespace JogoMilhao
                 BTNCorreto.BackgroundColor=Colors.Blue;
                 BTNIncorreto.BackgroundColor=Colors.Red;
                 return false;
+                labelPontuacao= "Pontuação:" + labelPontuacao;
+                labelNivel= "Nivel:" + labelNivel;
             }
         }
 
