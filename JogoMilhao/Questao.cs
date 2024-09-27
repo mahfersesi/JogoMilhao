@@ -70,8 +70,6 @@ namespace JogoMilhao
                 BTNCorreto.BackgroundColor=Colors.Blue;
                 BTNIncorreto.BackgroundColor=Colors.Red;
                 return false;
-                labelPontuacao= "Pontuação:" + labelPontuacao;
-                labelNivel= "Nivel:" + labelNivel;
             }
         }
 

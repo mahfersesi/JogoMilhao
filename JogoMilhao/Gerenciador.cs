@@ -6,15 +6,27 @@ public class Gerenciador
     List<Questao> ListaQuestoes = new List<Questao>();
     List<int> ListaQuestoesRespondidas = new List<int>();
     Questao QuestaoCorrente;
+     public int Pontuacao{ get; private set; }
+
+    Label labelPontuacao;
+    Label labelNivel;
+    int NivelResposta = 0;
+
+    void Initialize()
+    {
+        Pontuacao = 0;
+        NivelResposta = 0;
+        ProximaQuestao();
+    }
     public Gerenciador(Label labelPergunta,Button BTNResposta01,Button BTNResposta02,Button BTNResposta03,Button BTNResposta04, Button BTNResposta05)
     {
         CriarQuestoes(labelPergunta, BTNResposta01, BTNResposta02, BTNResposta03, BTNResposta04, BTNResposta05);
-        this.labelNivel = labelNivel;
+       this.labelNivel = labelNivel;
         this.labelPontuacao = labelPontuacao;
     }
     void CriarQuestoes(Label labelPergunta, Button BTNResposta01, Button BTNResposta02, Button BTNResposta03, Button BTNResposta04, Button BTNResposta05)
 {
-    // Pergunta 1
+
     var Q1 = new Questao();
     Q1.Pergunta = "Quanto é 2 + 2?";
     Q1.Resposta1 = "1";
@@ -1240,5 +1252,47 @@ public class Gerenciador
          await Task.Delay(1000);
          ProximaQuestao();
         }
+
       }
+       void AdicionaPontuacao(int n){
+        if(n == 1)
+        {
+            Pontuacao = 1000;
+        }
+        if(n == 2)
+        {
+            Pontuacao = 2000;
+        }
+        if(n == 3){
+            Pontuacao = 5000;
+        }
+        if(n == 4)
+        {
+            Pontuacao = 10000;
+        }
+        if(n == 5)
+        {
+            Pontuacao = 20000;
+        }
+        if(n == 6)
+        {
+            Pontuacao = 50000;
+        }
+        if(n == 7)
+        {
+            Pontuacao = 100000;
+        }
+        if(n == 8)
+        {
+            Pontuacao = 200000;
+        }
+        if(n == 9)
+        {
+            Pontuacao = 500000;
+        }
+        if(n == 10)
+        {
+            Pontuacao = 1000000;
+        }
+       }
 }
