@@ -4,12 +4,13 @@ public class Gerenciador
 {
     
     List<Questao> ListaQuestoes = new List<Questao>();
-    List<int> ListaQuestoesRespondidas = new List<int>();
+    List<Questao> ListaQuestoesRespondidas = new List<Questao>();
     Questao QuestaoCorrente;
      public int Pontuacao{ get; private set; }
 
     Label labelPontuacao;
     Label labelNivel;
+    Questao QuestaoAtual;
     int NivelResposta = 0;
 
     void Initialize()
@@ -28,6 +29,9 @@ public class Gerenciador
 {
 
     var Q1 = new Questao();
+
+     Q1.NivelResposta = 1;
+
     Q1.Pergunta = "Quanto é 2 + 2?";
     Q1.Resposta1 = "1";
     Q1.Resposta2 = "2";
@@ -77,6 +81,9 @@ public class Gerenciador
     // Pergunta 5
     var Q5 = new Questao();
     Q5.Pergunta = "Qual é a fórmula da água?";
+
+     Q5.NivelResposta = 1;
+
     Q5.Resposta1 = "CO2";
     Q5.Resposta2 = "H2O";
     Q5.Resposta3 = "O2";
@@ -1238,11 +1245,14 @@ public class Gerenciador
 
       public void ProximaQuestao()
       {
-        var NumRandomico = Random.Shared.Next(0,ListaQuestoes.Count);
-        while(ListaQuestoesRespondidas.Contains(NumRandomico))
-         NumRandomico = Random.Shared.Next(0, ListaQuestoes.Count);
-         ListaQuestoesRespondidas.Add(NumRandomico);
-         QuestaoCorrente = ListaQuestoes[NumRandomico];
+          var numRandomico = Random.Shared.Next(0, ListaQuestoes.Count - 1);
+          QuestaoAtual = ListaQuestoes[numRandomico];
+        while(ListaQuestoesRespondidas.Contains(QuestaoAtual))
+        {
+         numRandomico = Random.Shared.Next(0, ListaQuestoes.Count - 1);
+         ListaQuestoesRespondidas.Add(numRandomico);
+        }
+         QuestaoCorrente = ListaQuestoes(QuestaoAtual);
          QuestaoCorrente.Desenhar();
       }
       public async void VerificaResposta(int rr)

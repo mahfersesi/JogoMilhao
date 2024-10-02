@@ -11,7 +11,7 @@ namespace JogoMilhao
         public int Respostacorreta;
         public int labelNivel;
         public int labelPontuacao ;
-        public int Nivelresposta;
+        public int NivelResposta;
         private Label Labelpergunta;
         private Button Button1;
         private Button Button2;
@@ -19,6 +19,10 @@ namespace JogoMilhao
         private Button Button4;
         private Button Button5;
 
+         public bool Equals(Questao Q)
+    {
+        return this.NivelResposta == Q.NivelResposta;
+    }
 
         public void ConfiguraEstruturaDesenho(Label labelpergunta, Button buttonresposta1, Button buttonresposta2, Button buttonresposta3, Button buttonresposta4, Button buttonresposta5)
         {
@@ -37,6 +41,12 @@ namespace JogoMilhao
             Button3.Text = Resposta3;
             Button4.Text = Resposta4;
             Button5.Text = Resposta5;
+
+            Button1.BackgroundColor = Color.FromRgba("#4287f5");
+            Button2.BackgroundColor = Color.FromRgba("#4287f5");
+            Button3.BackgroundColor = Color.FromRgba("#4287f5");
+            Button4.BackgroundColor = Color.FromRgba("#4287f5");
+            Button5.BackgroundColor = Color.FromRgba("#4287f5");
         }
         private Button QualBTN(int RR)
         {
