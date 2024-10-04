@@ -4,14 +4,12 @@ public class Gerenciador
 {
     
     List<Questao> ListaQuestoes = new List<Questao>();
-    List<Questao> ListaQuestoesRespondidas = new List<Questao>();
-    Questao QuestaoCorrente;
+    List<int> ListaQuestoesRespondidas = new List<int>();
      public int Pontuacao{ get; private set; }
-
+     int NivelResposta = 0;
     Label labelPontuacao;
     Label labelNivel;
     Questao QuestaoAtual;
-    int NivelResposta = 0;
 
     void Initialize()
     {
@@ -19,7 +17,7 @@ public class Gerenciador
         NivelResposta = 0;
         ProximaQuestao();
     }
-    public Gerenciador(Label labelPergunta,Button BTNResposta01,Button BTNResposta02,Button BTNResposta03,Button BTNResposta04, Button BTNResposta05)
+    public Gerenciador(Label labelPergunta,Button BTNResposta01,Button BTNResposta02,Button BTNResposta03,Button BTNResposta04, Button BTNResposta05,Label labelPontuacao,Label labelNivel)
     {
         CriarQuestoes(labelPergunta, BTNResposta01, BTNResposta02, BTNResposta03, BTNResposta04, BTNResposta05);
        this.labelNivel = labelNivel;
@@ -1246,18 +1244,17 @@ public class Gerenciador
       public void ProximaQuestao()
       {
           var numRandomico = Random.Shared.Next(0, ListaQuestoes.Count - 1);
-          QuestaoAtual = ListaQuestoes[numRandomico];
-        while(ListaQuestoesRespondidas.Contains(QuestaoAtual))
+        while(ListaQuestoesRespondidas.Contains(numRandomico))
         {
          numRandomico = Random.Shared.Next(0, ListaQuestoes.Count - 1);
-         ListaQuestoesRespondidas.Add(numRandomico);
         }
-         QuestaoCorrente = ListaQuestoes(QuestaoAtual);
-         QuestaoCorrente.Desenhar();
+        ListaQuestoesRespondidas.Add(numRandomico);
+        QuestaoAtual = ListaQuestoes[numRandomico];
+         QuestaoAtual.Desenhar();
       }
       public async void VerificaResposta(int rr)
       {
-        if(QuestaoCorrente.VerificaResposta(rr))
+        if(QuestaoAtual.VerificaResposta(rr))
         {
          await Task.Delay(1000);
          ProximaQuestao();

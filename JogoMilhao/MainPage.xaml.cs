@@ -7,7 +7,7 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-		gerenciador = new Gerenciador(labelpergunta, btnResposta01, btnResposta02, btnResposta03, btnResposta04, btnResposta05);
+		gerenciador = new Gerenciador(labelpergunta, btnResposta01, btnResposta02, btnResposta03, btnResposta04, btnResposta05,labelNivel,labelPontuacao);
     gerenciador.ProximaQuestao();
 	}
 
@@ -35,6 +35,25 @@ public partial class MainPage : ContentPage
   {
     gerenciador!.VerificaResposta(5);
   }
+  void AjudaTirarBTN(object creu, EventArgs e)
+	{
+		var ajuda = new RetiradaErradas();
+		ajuda.ConfiguraDesenho(Resposta1, Resposta2, Resposta3, Resposta4, Resposta5);
+		ajuda.RealizarAjuda(gerenciador.GetQuestaoAtual());
+		(creu as Button).IsVisible = false;
+	}
+
+	void Pulabutton(object creu, EventArgs e)
+	{
+		gerenciador.ProximaQuestao();
+		(creu as Button).IsVisible = false;
+	}
+
+	void universitarios(object creu, EventArgs e)
+	{
+		var burros = new Universitarios();
+		burros.ConfiguraDesenho;
+	}
 }
 
 	

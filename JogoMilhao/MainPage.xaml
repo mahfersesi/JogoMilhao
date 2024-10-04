@@ -2,120 +2,144 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JogoMilhao.MainPage"
-              Shell.NavBarIsVisible="False"
+             Shell.NavBarIsVisible="False"
              BackgroundColor="Black">
 
-    <Grid>
+  <Grid>
     <Grid.RowDefinitions>
-        <RowDefinition Height="250"/>
-        
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="10"/>
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="10"/>
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="10"/>
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="10"/>
-        <RowDefinition Height="*"/>
-        <RowDefinition Height="10"/>
-        </Grid.RowDefinitions>
+      <RowDefinition Height="250"/>
 
-        <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="*"/>
-        <ColumnDefinition Width="*"/>
-        <ColumnDefinition Width="*"/>
-   
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="10"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="10"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="10"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="10"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="10"/>
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="*"/>
+
     </Grid.ColumnDefinitions>
 
 
 
     <Image Source="jogodomilhao.png"
-             Aspect="AspectFill"
-            Grid.Row="0"
-            Grid.ColumnSpan="3"/>
+           Aspect="AspectFill"
+           Grid.Row="0"
+           Grid.ColumnSpan="3"/>
 
-         <Label Text="Pontuação:"
-                               TextColor="White" 
-                               FontSize="16"
-                               FontFamily="StalystaPersonal"
-                               Margin="10, 2, 10, 15"
-                               x:Name="labelPontuacao"
-                               Grid.Row="1"
-                               Grid.Column="0"
-                               Grid.ColumnSpan="2"/>
+    <Label Text="Pontuação:"
+           TextColor="White"
+           FontSize="16"
+           FontFamily="StalystaPersonal"
+           Margin="10, 2, 10, 15"
+           x:Name="labelPontuacao"
+           Grid.Row="1"
+           Grid.Column="0"
+           Grid.ColumnSpan="2"/>
 
-        <Label Text="Nível:"
-                               TextColor="White" 
-                               FontSize="16"
-                               FontFamily="StalystaPersonal"
-                               Margin="10,2, 10, 15"
-                               x:Name="labelNivel" 
-                               Grid.Row="1"
-                               Grid.Column="2"/>
+    <Label Text="Nível:"
+           TextColor="White"
+           FontSize="16"
+           FontFamily="StalystaPersonal"
+           Margin="10,2, 10, 15"
+           x:Name="labelNivel"
+           Grid.Row="1"
+           Grid.Column="2"/>
 
-        
+
 
     <Label x:Name="labelpergunta"
-             TextColor="White"
-             FontSize="18"
-             FontFamily="OpenSansSemibold"
-             Grid.Row="2"
-             Grid.RowSpan="2"
-             Grid.ColumnSpan="3"/>
+           TextColor="White"
+           FontSize="18"
+           FontFamily="OpenSansSemibold"
+           Grid.Row="2"
+           Grid.RowSpan="2"
+           Grid.ColumnSpan="3"/>
 
-     <Button x:Name="btnResposta01"
+    <Button x:Name="btnResposta01"
             FontAttributes="Bold"
-              FontSize="16"
-              TextColor="Black"
-              BackgroundColor="Yellow"
-              FontFamily="OpenSansSemibold"
-              Grid.Row="3"
-              Grid.ColumnSpan="3"
-              Clicked="OnBtnResposta01Clicked"/>
-        
+            FontSize="16"
+            TextColor="Black"
+            BackgroundColor="Yellow"
+            FontFamily="OpenSansSemibold"
+            Grid.Row="3"
+            Grid.ColumnSpan="3"
+            Clicked="OnBtnResposta01Clicked"/>
+
     <Button x:Name="btnResposta02"
             FontAttributes="Bold"
-              FontSize="16"
-              TextColor="Black"
-              BackgroundColor="Yellow"
-              FontFamily="OpenSansSemibold"
-              Grid.Row="5"
-              Grid.ColumnSpan="3"
-              Clicked="OnBtnResposta02Clicked"/>
+            FontSize="16"
+            TextColor="Black"
+            BackgroundColor="Yellow"
+            FontFamily="OpenSansSemibold"
+            Grid.Row="5"
+            Grid.ColumnSpan="3"
+            Clicked="OnBtnResposta02Clicked"/>
 
     <Button x:Name="btnResposta03"
             FontAttributes="Bold"
-              FontSize="16"
-              TextColor="Black"
-              BackgroundColor="Yellow"
-              FontFamily="OpenSansSemibold"
-              Grid.Row="7"
-              Grid.ColumnSpan="3"
-              Clicked="OnBtnResposta03Clicked"/>
+            FontSize="16"
+            TextColor="Black"
+            BackgroundColor="Yellow"
+            FontFamily="OpenSansSemibold"
+            Grid.Row="7"
+            Grid.ColumnSpan="3"
+            Clicked="OnBtnResposta03Clicked"/>
 
     <Button x:Name="btnResposta04"
             FontAttributes="Bold"
-              FontSize="16"
-              TextColor="Black"
-              BackgroundColor="Yellow"
-              FontFamily="OpenSansSemibold"
-              Grid.Row="9"
-              Grid.ColumnSpan="3"
-              Clicked="OnBtnResposta04Clicked"/>
+            FontSize="16"
+            TextColor="Black"
+            BackgroundColor="Yellow"
+            FontFamily="OpenSansSemibold"
+            Grid.Row="9"
+            Grid.ColumnSpan="3"
+            Clicked="OnBtnResposta04Clicked"/>
 
     <Button x:Name="btnResposta05"
             FontAttributes="Bold"
-              FontSize="16"
-              TextColor="Black"
-              BackgroundColor="Yellow"
-              FontFamily="OpenSansSemibold"
-              Grid.Row="11"
-              Grid.ColumnSpan="3"
-              Clicked="OnBtnResposta05Clicked"/>
-    
-    </Grid>
+            FontSize="16"
+            TextColor="Black"
+            BackgroundColor="Yellow"
+            FontFamily="OpenSansSemibold"
+            Grid.Row="11"
+            Grid.ColumnSpan="3"
+            Clicked="OnBtnResposta05Clicked"/>
+
+    <Button Clicked="AjudaTirarBTN"
+                                                Text="-3"
+                                                BackgroundColor="White"
+                                                TextColor="Black"
+                                                Margin="5"
+                                                Grid.Row="7"
+                                                Grid.Column="0"/>
+
+                                        <Button Clicked="Pulabutton"
+                                                Text="pular"
+                                                BackgroundColor="White"
+                                                TextColor="Black"
+                                                Margin="5"
+                                                Grid.Row="7"
+                                                Grid.Column="1"/>
+
+                                        <Button x:Name="universitarios"
+                                                Text="Inteligencia"
+                                                BackgroundColor="White"
+                                                TextColor="Black"
+                                                Margin="5"
+                                                Grid.Row="7"
+                                                Grid.Column="2"/>
+
+  </Grid>
 
 </ContentPage>
