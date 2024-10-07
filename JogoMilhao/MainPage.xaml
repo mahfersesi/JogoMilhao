@@ -121,7 +121,7 @@
                                                 BackgroundColor="White"
                                                 TextColor="Black"
                                                 Margin="5"
-                                                Grid.Row="7"
+                                                Grid.Row="13"
                                                 Grid.Column="0"/>
 
                                         <Button Clicked="Pulabutton"
@@ -129,15 +129,15 @@
                                                 BackgroundColor="White"
                                                 TextColor="Black"
                                                 Margin="5"
-                                                Grid.Row="7"
+                                                Grid.Row="13"
                                                 Grid.Column="1"/>
 
-                                        <Button x:Name="universitarios"
+                                        <Button x:Name="genios"
                                                 Text="Inteligencia"
                                                 BackgroundColor="White"
                                                 TextColor="Black"
                                                 Margin="5"
-                                                Grid.Row="7"
+                                                Grid.Row="13"
                                                 Grid.Column="2"/>
 
   </Grid>

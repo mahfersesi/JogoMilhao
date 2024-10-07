@@ -37,10 +37,10 @@ public partial class MainPage : ContentPage
   }
   void AjudaTirarBTN(object creu, EventArgs e)
 	{
-		var ajuda = new RetiradaErradas();
+		var ajuda = new RetiraErradas();
 		ajuda.ConfiguraDesenho(Resposta1, Resposta2, Resposta3, Resposta4, Resposta5);
-		ajuda.RealizarAjuda(gerenciador.GetQuestaoAtual());
-		(creu as Button).IsVisible = false;
+		ajuda.RealizaAjuda(gerenciador.QuestaoAtual());
+		(tira as Button).IsVisible = false;
 	}
 
 	void Pulabutton(object creu, EventArgs e)
@@ -49,7 +49,7 @@ public partial class MainPage : ContentPage
 		(creu as Button).IsVisible = false;
 	}
 
-	void universitarios(object creu, EventArgs e)
+	void genios(object creu, EventArgs e)
 	{
 		var burros = new Universitarios();
 		burros.ConfiguraDesenho;
