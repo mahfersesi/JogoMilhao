@@ -44,10 +44,6 @@ public partial class MainPage : ContentPage
 	{
 		gerenciador.ProximaQuestao();
 		(sender as Button).IsVisible = false;
-		if 
-		(var Pulabutton int 3)
-		else
-		(sender as Button).IsVisible = false;
 
 	}
 
