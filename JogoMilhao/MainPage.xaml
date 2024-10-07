@@ -120,7 +120,6 @@
                                                 Text="-3"
                                                 BackgroundColor="White"
                                                 TextColor="Black"
-                                                Margin="5"
                                                 Grid.Row="13"
                                                 Grid.Column="0"/>
 
@@ -128,15 +127,13 @@
                                                 Text="pular"
                                                 BackgroundColor="White"
                                                 TextColor="Black"
-                                                Margin="5"
                                                 Grid.Row="13"
                                                 Grid.Column="1"/>
 
-                                        <Button x:Name="genios"
+                                        <Button Clicked="genios"
                                                 Text="Inteligencia"
                                                 BackgroundColor="White"
                                                 TextColor="Black"
-                                                Margin="5"
                                                 Grid.Row="13"
                                                 Grid.Column="2"/>
 

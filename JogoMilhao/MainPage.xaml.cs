@@ -35,24 +35,26 @@ public partial class MainPage : ContentPage
   {
     gerenciador!.VerificaResposta(5);
   }
-  void AjudaTirarBTN(object creu, EventArgs e)
+  void AjudaTirarBTN(object sender, EventArgs e)
 	{
-		var ajuda = new RetiraErradas();
-		ajuda.ConfiguraDesenho(Resposta1, Resposta2, Resposta3, Resposta4, Resposta5);
-		ajuda.RealizaAjuda(gerenciador.QuestaoAtual());
-		(tira as Button).IsVisible = false;
+		
 	}
 
-	void Pulabutton(object creu, EventArgs e)
+	void Pulabutton(object sender, EventArgs e)
 	{
 		gerenciador.ProximaQuestao();
-		(creu as Button).IsVisible = false;
+		(sender as Button).IsVisible = false;
+		if 
+		(var Pulabutton int 3)
+		else
+		(sender as Button).IsVisible = false;
+
 	}
 
-	void genios(object creu, EventArgs e)
+	void genios(object sender, EventArgs e)
 	{
-		var burros = new Universitarios();
-		burros.ConfiguraDesenho;
+		var inteligentes = new Universitarios();
+		inteligentes.ConfiguraEstruturaDesenho;
 	}
 }
 
