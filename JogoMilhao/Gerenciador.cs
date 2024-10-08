@@ -17,6 +17,10 @@ public class Gerenciador
         NivelResposta = 0;
         ProximaQuestao();
     }
+    public Questao GetAtualQuestao()
+    {
+        return QuestaoAtual;
+    }
     public Gerenciador(Label labelPergunta,Button BTNResposta01,Button BTNResposta02,Button BTNResposta03,Button BTNResposta04, Button BTNResposta05,Label labelPontuacao,Label labelNivel)
     {
         CriarQuestoes(labelPergunta, BTNResposta01, BTNResposta02, BTNResposta03, BTNResposta04, BTNResposta05);

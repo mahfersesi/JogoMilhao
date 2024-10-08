@@ -1,9 +1,9 @@
 namespace JogoMilhao;
-public class RetiraErradas : IAjuda
+public class RetiraErrada : IAjuda 
 {
-    public void RealizaAjuda (Questao questao)
+    public override void RealizaAjuda (Questao questao)
     {
-        switch (questao.RespostaCorreta)
+        switch (questao.Respostacorreta)
         {
         
         case 1:

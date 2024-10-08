@@ -3,6 +3,7 @@
 public partial class MainPage : ContentPage
 {
 	int count = 0;
+  int Pula=0;
 	Gerenciador gerenciador;
 	public MainPage()
 	{
@@ -35,22 +36,37 @@ public partial class MainPage : ContentPage
   {
     gerenciador!.VerificaResposta(5);
   }
-  void AjudaTirarBTN(object sender, EventArgs e)
+  private void AjudaTirarBTN(object sender, EventArgs e)
 	{
-		
+     
+      var ajuda = new RetiraErrada();
+      ajuda.ConfiguraEstruturaDesenho(btnResposta01,btnResposta02,btnResposta03,btnResposta04,btnResposta05);
+      ajuda.RealizaAjuda(gerenciador.GetAtualQuestao());
+      (sender as Button).IsVisible = false;
+    
+
 	}
 
-	void Pulabutton(object sender, EventArgs e)
+	private async void Pulabutton(object sender, EventArgs e)
 	{
+    if (Pula==2)
+    (sender as Button).IsVisible = false;
+    else
+    {
 		gerenciador.ProximaQuestao();
-		(sender as Button).IsVisible = false;
-
+		Pula++;
+    }
+    BTNPular.text="Pula"+(3-Pula)+"*";
 	}
 
-	void genios(object sender, EventArgs e)
+	private void genios(object sender, EventArgs e)
 	{
-		var inteligentes = new Universitarios();
-		inteligentes.ConfiguraEstruturaDesenho;
+    
+		var ajuda = new Universitarios();
+		ajuda.ConfiguraEstruturaDesenho(btnResposta01,btnResposta02,btnResposta03,btnResposta04,btnResposta05);
+    ajuda.RealizaAjuda(gerenciador.GetAtualQuestao());
+    (sender as Button).IsVisible = false;
+    
 	}
 }
 

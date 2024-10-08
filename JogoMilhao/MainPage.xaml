@@ -21,6 +21,8 @@
       <RowDefinition Height="10"/>
       <RowDefinition Height="*"/>
       <RowDefinition Height="10"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
 
     <Grid.ColumnDefinitions>
@@ -124,6 +126,7 @@
                                                 Grid.Column="0"/>
 
                                         <Button Clicked="Pulabutton"
+                                                x:Name="BTNPular"
                                                 Text="pular"
                                                 BackgroundColor="White"
                                                 TextColor="Black"

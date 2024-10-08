@@ -1,4 +1,4 @@
-namespace JogoMilhao;
+using JogoMilhao;
 
 public abstract class IAjuda
 {
@@ -20,7 +20,7 @@ public abstract class IAjuda
  }
  public void ConfiguraEstruturaDesenho(Frame frameAjuda)
  {
-    this.FrameAjuda = frameAjuda;
+    this.FrameAjuda = FrameAjuda;
  }
  public abstract void RealizaAjuda(Questao questao);
 }
